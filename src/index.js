@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { createGlobalStyle } from 'styled-components';
+
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+
+const GlobalStyles = createGlobalStyle`
+body {
+  font-family: 'Segoe UI';
+
+  background: #111;
+}
+`;
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyles />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
